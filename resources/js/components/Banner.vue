@@ -6,7 +6,11 @@
             </div>
         </div>
 
-        <div class="parallax-window" data-parallax="scroll" data-image-src="https://wallpaperplay.com/walls/full/0/e/c/272141.jpg"></div>
+        <div class="parallax-window uskoro-wrapper" data-parallax="scroll" data-image-src="https://wallpaperplay.com/walls/full/0/e/c/272141.jpg">
+            <div class="uskoro">
+                <h1>USKORO</h1>
+            </div>
+        </div>
        
     </div>
            
@@ -21,11 +25,10 @@
 @import "../../sass/_layout.scss";
 
 .parallax-window {
-  height: 900px;
+  height: 100vh;
   background: transparent;
 }
 .banner-wrapper {
-    margin-top: 80px;
     display: flex;
     justify-content: flex-end;
     .banner__logo {
@@ -36,6 +39,28 @@
         align-items: center;
         img {
            
+        }
+    }
+}
+.uskoro-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .uskoro {
+        width: 1200px;
+        height: 200px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: white; 
+            font-size: 60px;
+            margin: 0;
+            padding: 0 150px;
+            font-weight: lighter;
+            border-top: 4px solid #868F3F;
+            border-bottom: 4px solid #868F3F;
         }
     }
 }

@@ -47793,7 +47793,7 @@ function injectStyle (ssrContext) {
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = null
+var __vue_script__ = __webpack_require__(60)
 /* template */
 var __vue_template__ = __webpack_require__(46)
 /* template functional */
@@ -47868,7 +47868,7 @@ exports = module.exports = __webpack_require__(12)(false);
 
 
 // module
-exports.push([module.i, "\nbody[data-v-1f42fb90] {\n  margin: 0 !important;\n}\n.container[data-v-1f42fb90] {\n  width: 1200px !important;\n  margin: 0 auto !important;\n}\n.navbar-laravel[data-v-1f42fb90] {\n  background-color: #fff;\n  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n}\n.navbar[data-v-1f42fb90] {\n  width: 100%;\n  height: 80px;\n  background-color: black;\n  position: fixed;\n  top: 0;\n  margin: 0;\n  color: white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.navbar ul[data-v-1f42fb90] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    list-style: none;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding: 0;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.navbar ul a[data-v-1f42fb90] {\n      padding: 0 10px;\n      color: white;\n      text-decoration: none;\n      text-transform: uppercase;\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-1f42fb90] {\n  margin: 0 !important;\n}\n.container[data-v-1f42fb90] {\n  width: 1200px !important;\n  margin: 0 auto !important;\n}\n.navbar-laravel[data-v-1f42fb90] {\n  background-color: #fff;\n  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n}\n.navbar[data-v-1f42fb90] {\n  width: 100%;\n  height: 80px;\n  position: fixed;\n  top: 0;\n  margin: 0;\n  color: white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.navbar ul[data-v-1f42fb90] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    list-style: none;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding: 0;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n}\n.navbar ul a[data-v-1f42fb90] {\n      padding: 0 10px;\n      color: white;\n      text-decoration: none;\n      text-transform: uppercase;\n}\n.navbar.scrolled[data-v-1f42fb90] {\n  background-color: #000 !important;\n  -webkit-transition: background-color 100ms linear;\n  transition: background-color 100ms linear;\n}\n", ""]);
 
 // exports
 
@@ -47924,13 +47924,15 @@ var staticRenderFns = [
     return _c("nav", { staticClass: "navbar" }, [
       _c("div", { staticClass: "container navbar-menu" }, [
         _c("ul", [
-          _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("menu")])]),
+          _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("meni")])]),
           _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("menu")])]),
+          _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("o nama")])]),
           _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("menu")])]),
+          _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("o pivu")])]),
           _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("menu")])])
+          _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("naruci")])]),
+          _vm._v(" "),
+          _c("li", [_c("a", { attrs: { href: "" } }, [_vm._v("kontakt")])])
         ])
       ])
     ])
@@ -48114,7 +48116,7 @@ exports = module.exports = __webpack_require__(12)(false);
 
 
 // module
-exports.push([module.i, "\nbody[data-v-3d01b757] {\n  margin: 0 !important;\n}\n.container[data-v-3d01b757] {\n  width: 1200px !important;\n  margin: 0 auto !important;\n}\n.navbar-laravel[data-v-3d01b757] {\n  background-color: #fff;\n  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n}\n.parallax-window[data-v-3d01b757] {\n  height: 900px;\n  background: transparent;\n}\n.banner-wrapper[data-v-3d01b757] {\n  margin-top: 80px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n.banner-wrapper .banner__logo[data-v-3d01b757] {\n    width: 50%;\n    height: 100%;\n    background-color: black;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-3d01b757] {\n  margin: 0 !important;\n}\n.container[data-v-3d01b757] {\n  width: 1200px !important;\n  margin: 0 auto !important;\n}\n.navbar-laravel[data-v-3d01b757] {\n  background-color: #fff;\n  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n}\n.parallax-window[data-v-3d01b757] {\n  height: 100vh;\n  background: transparent;\n}\n.banner-wrapper[data-v-3d01b757] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n.banner-wrapper .banner__logo[data-v-3d01b757] {\n    width: 50%;\n    height: 100%;\n    background-color: black;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.uskoro-wrapper[data-v-3d01b757] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.uskoro-wrapper .uskoro[data-v-3d01b757] {\n    width: 1200px;\n    height: 200px;\n    background-color: black;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.uskoro-wrapper .uskoro h1[data-v-3d01b757] {\n      color: white;\n      font-size: 60px;\n      margin: 0;\n      padding: 0 150px;\n      font-weight: lighter;\n      border-top: 4px solid #868F3F;\n      border-bottom: 4px solid #868F3F;\n}\n", ""]);
 
 // exports
 
@@ -48125,6 +48127,10 @@ exports.push([module.i, "\nbody[data-v-3d01b757] {\n  margin: 0 !important;\n}\n
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
+//
+//
+//
+//
 //
 //
 //
@@ -48255,14 +48261,18 @@ var staticRenderFns = [
         ]
       ),
       _vm._v(" "),
-      _c("div", {
-        staticClass: "parallax-window",
-        attrs: {
-          "data-parallax": "scroll",
-          "data-image-src":
-            "https://wallpaperplay.com/walls/full/0/e/c/272141.jpg"
-        }
-      })
+      _c(
+        "div",
+        {
+          staticClass: "parallax-window uskoro-wrapper",
+          attrs: {
+            "data-parallax": "scroll",
+            "data-image-src":
+              "https://wallpaperplay.com/walls/full/0/e/c/272141.jpg"
+          }
+        },
+        [_c("div", { staticClass: "uskoro" }, [_c("h1", [_vm._v("USKORO")])])]
+      )
     ])
   }
 ]
@@ -48289,6 +48299,31 @@ if (false) {
 /***/ (function(module, exports) {
 
 module.exports = "/images/logo.png?20e7ff9b8d6635d07dcea6f62107b8e5";
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+$(function () {
+    $(document).scroll(function () {
+        var $nav = $(".navbar");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+});
 
 /***/ })
 /******/ ]);
