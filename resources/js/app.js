@@ -17,8 +17,9 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
+Vue.component('header-nav', require('./components/Header.vue'));
+Vue.component('home-component', require('./components/Home.vue'));
+Vue.component('banner-component', require('./components/Banner.vue'));
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
 
