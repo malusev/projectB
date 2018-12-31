@@ -17,11 +17,8 @@
            <home-component>
                
            </home-component>
-           <div class="parallax-window" data-parallax="scroll" data-image-src="https://wallpaperplay.com/walls/full/0/e/c/272141.jpg"></div>
+           
     </div>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <!--parallax-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="../js/parallax/parallax.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>    
     </body>
 </html>

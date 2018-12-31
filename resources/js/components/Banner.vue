@@ -21,7 +21,7 @@
 @import "../../sass/_layout.scss";
 
 .parallax-window {
-  height: 800px;
+  height: 900px;
   background: transparent;
 }
 .banner-wrapper {
