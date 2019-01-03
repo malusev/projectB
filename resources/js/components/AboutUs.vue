@@ -1,8 +1,8 @@
 <template>
-    <div class="page-banner">     
-        <div class="parallax-window banner-wrapper" data-parallax="scroll" data-image-src="https://wallpaperplay.com/walls/full/0/e/c/272141.jpg">
-            <div class="banner__logo">
-                <img src="../../images/logo.png" />
+    <div class="page-about">     
+        <div class="parallax-window about-wrapper" data-parallax="scroll" data-image-src="https://i.pinimg.com/originals/53/7b/a4/537ba46b2cfff76bf0b5afa23b6a3514.jpg">
+            <div class="uskoro">
+                <h1>USKORO</h1>
             </div>
         </div>       
     </div>
@@ -21,17 +21,25 @@
   height: 100vh;
   background: transparent;
 }
-.banner-wrapper {
+.about-wrapper {
     display: flex;
-    justify-content: flex-end;
-    .banner__logo {
-        width: 50%;
-        height: 100%;
+    justify-content: center;
+    align-items: center;
+    .uskoro {
+        width: 1200px;
+        height: 200px;
         background-color: black;
         display: flex;
+        justify-content: center;
         align-items: center;
-        img {
-           width: 100%;
+        h1 {
+            color: white; 
+            font-size: 60px;
+            margin: 0;
+            padding: 0 150px;
+            font-weight: lighter;
+            border-top: 4px solid #868F3F;
+            border-bottom: 4px solid #868F3F;
         }
     }
 }

@@ -1,8 +1,7 @@
 <template>
     <nav class="navbar">
-        <div class="container navbar-menu">
+        <div class="navbar-menu">
             <ul>
-                <li><a href="">meni</a></li>
                 <li><a href="">o nama</a></li>
                 <li><a href="">o pivu</a></li>
                 <li><a href="">naruci</a></li>
@@ -12,12 +11,12 @@
     </nav>
 </template>
 <script>
-    $(function () {
-        $(document).scroll(function () {
-            var $nav = $(".navbar");
-            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-        });
+$(function () {
+    $(document).scroll(function () {
+        var $nav = $(".navbar");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
+});
 </script>
 <style lang="scss" scoped>
 @import "../../sass/_layout.scss";
@@ -31,17 +30,48 @@
     color: white;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     ul {
         display: flex;
         list-style: none;
         align-items: center;
         padding: 0;
-        justify-content: flex-end;
+        margin-right: 80px;
         a {
-            padding: 0 10px;
+            margin: 12px;
+            padding: 14px 10px;
             color: white;
             text-decoration: none;
             text-transform: uppercase;
+            position: relative;
+            &:before {
+                content: " ";
+                position: absolute;
+                left: 0%;
+                bottom: 10px;
+                height: 1px;
+                width: 0%;
+                background-color: #868F3F;
+                transition: width 0.5s ease-in-out;
+            }
+            &:after {
+                content: " ";
+                position: absolute;
+                right: 0%;
+                bottom: 10px;
+                height: 1px;
+                width: 0%;
+                background-color: #868F3F;
+                transition: width 0.5s ease-in-out;
+            }                
+            &:hover,&:focus{
+                &:before{
+                    width:50%
+                }
+                &:after{
+                    width:50%
+                }                
+            }
         }
     }
 }

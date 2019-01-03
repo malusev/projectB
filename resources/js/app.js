@@ -20,6 +20,8 @@ window.Vue = require('vue');
 Vue.component('header-nav', require('./components/Header.vue'));
 Vue.component('home-component', require('./components/Home.vue'));
 Vue.component('banner-component', require('./components/Banner.vue'));
+Vue.component('about-component', require('./components/AboutUs.vue'));
+Vue.component('beers-component', require('./components/Beers.vue'));
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
 
