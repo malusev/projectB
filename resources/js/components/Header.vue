@@ -2,10 +2,10 @@
     <nav class="navbar">
         <div class="navbar-menu">
             <ul>
-                <li><a href="">o nama</a></li>
-                <li><a href="">o pivu</a></li>
+                <li><a href="#about">o nama</a></li>
+                <li><a href="#beers">o pivu</a></li>
                 <li><a href="">naruci</a></li>
-                <li><a href="">kontakt</a></li>
+                <li><a href="#contact">kontakt</a></li>
             </ul>
         </div>
     </nav>

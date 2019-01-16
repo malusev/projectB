@@ -1,5 +1,5 @@
 <template>
-    <div class="page-beers">     
+    <div class="page-beers" id="beers">     
         <div class="parallax-window beers-wrapper" data-parallax="scroll" data-image-src="https://stmed.net/sites/default/files/dark-grey-wallpapers-25192-2374233.jpg">
             <div class="uskoro">
                 <h1>USKORO</h1>

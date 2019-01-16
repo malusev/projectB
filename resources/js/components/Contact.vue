@@ -1,15 +1,10 @@
 <template>
-    <div>
-        <header-nav></header-nav>
-        <banner-component></banner-component>        
-        <about-component></about-component>
-        <div class="parallax-window uskoro-wrapper" data-parallax="scroll" data-image-src="https://wallpaperplay.com/walls/full/0/e/c/272141.jpg">
+    <div class="page-contact" id="contact">     
+        <div class="parallax-window contact-wrapper" data-parallax="scroll" data-image-src="https://i.pinimg.com/originals/53/7b/a4/537ba46b2cfff76bf0b5afa23b6a3514.jpg">
             <div class="uskoro">
                 <h1>USKORO</h1>
             </div>
-        </div>
-        <beers-component></beers-component>
-        <contact-component></contact-component>
+        </div>       
     </div>
            
 </template>
@@ -26,7 +21,7 @@
   height: 100vh;
   background: transparent;
 }
-.uskoro-wrapper {
+.contact-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,4 +43,5 @@
         }
     }
 }
+
 </style>

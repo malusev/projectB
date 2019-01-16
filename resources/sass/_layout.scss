@@ -5,8 +5,9 @@ body {
 .container {
     width: 1200px !important;
     margin: 0 auto !important;
+    scroll-behavior: smooth !important;
 }
 .navbar-laravel {
-background-color: #fff;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }

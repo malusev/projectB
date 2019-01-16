@@ -1,5 +1,5 @@
 <template>
-    <div class="page-about">     
+    <div class="page-about" id="about">     
         <div class="parallax-window about-wrapper" data-parallax="scroll" data-image-src="https://i.pinimg.com/originals/53/7b/a4/537ba46b2cfff76bf0b5afa23b6a3514.jpg">
             <div class="uskoro">
                 <h1>USKORO</h1>
