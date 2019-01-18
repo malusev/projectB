@@ -1,7 +1,19 @@
 <template>
     <div class="page-about" id="about">     
-        <div class="parallax-window about-wrapper" data-parallax="scroll" data-image-src="https://i.pinimg.com/originals/53/7b/a4/537ba46b2cfff76bf0b5afa23b6a3514.jpg">
-            <div class="uskoro">
+        <div class="about-wrapper">
+           
+            <div class='video-foreground'>
+                <img src="../../images/zolja.gif" />
+                <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <div class="kvadrat2" id="uskoro">
+                <h1>USKORO</h1>
+            </div>
+            <div class="kvadrat2" id="uskoro2">
+                <h1>USKORO</h1>
+            </div>
+            <div class="kvadrat2" id="uskoro3">
                 <h1>USKORO</h1>
             </div>
         </div>       
@@ -17,21 +29,25 @@
 <style lang="scss" scoped>
 @import "../../sass/_layout.scss";
 
-.parallax-window {
-  height: 100vh;
-  background: transparent;
-}
+
 .about-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    .uskoro {
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    #uskoro {
         width: 1200px;
         height: 200px;
         background-color: black;
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 0;
+        transform: translateY(-200px);
+        z-index: 999;
+        transform-origin: top;
         h1 {
             color: white; 
             font-size: 60px;
@@ -41,6 +57,60 @@
             border-top: 4px solid #868F3F;
             border-bottom: 4px solid #868F3F;
         }
+    }
+    #uskoro2 {
+        width: 1200px;
+        height: 200px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(-200px);
+        z-index: 999;
+        transform-origin: top;
+        h1 {
+            color: white; 
+            font-size: 60px;
+            margin: 0;
+            padding: 0 150px;
+            font-weight: lighter;
+            border-top: 4px solid #868F3F;
+            border-bottom: 4px solid #868F3F;
+        }
+    }
+    #uskoro3 {
+        width: 1200px;
+        height: 200px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(-200px);
+        z-index: 999;
+        transform-origin: top;
+        h1 {
+            color: white; 
+            font-size: 60px;
+            margin: 0;
+            padding: 0 150px;
+            font-weight: lighter;
+            border-top: 4px solid #868F3F;
+            border-bottom: 4px solid #868F3F;
+        }
+    }
+}
+.video-foreground {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: black;
+    iframe, img {
+        width: 100%;
+        height: 100%;
     }
 }
 

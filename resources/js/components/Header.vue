@@ -2,7 +2,7 @@
     <nav class="navbar">
         <div class="navbar-menu">
             <ul>
-                <li><a href="#about">o nama</a></li>
+                <li><a href="#about" id='onama'>o nama</a></li>
                 <li><a href="#beers">o pivu</a></li>
                 <li><a href="">naruci</a></li>
                 <li><a href="#contact">kontakt</a></li>
@@ -31,6 +31,7 @@ $(function () {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    z-index: 9999;
     ul {
         display: flex;
         list-style: none;

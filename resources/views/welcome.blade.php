@@ -20,6 +20,27 @@
            </home-component>
            
     </div>
-    <script src="{{ asset('js/app.js') }}"></script>    
+    <script src="{{ asset('js/app.js') }}"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+        
+        window.addEventListener("load", function(){
+
+            TweenMax.to('.banner__logo', 1.5, {scaleY: 1, height: '100vh'})
+            TweenMax.to('.kvadrat', 1.5, {opacity: 1, y: 0, delay: 1})
+        })
+        document.getElementById('onama').addEventListener('click', function(){
+            TweenMax.to('#uskoro', 1, {opacity: 1, y: 0, delay: 0.5})
+            TweenMax.to('#uskoro2', 1, {opacity: 1, y: 0, delay: 1.5})
+            TweenMax.to('#uskoro3', 1, {opacity: 1, y: 0, delay: 2.5})
+
+        })
+    </script>  
+
+    <script>
+    
+        
+    </script>
     </body>
 </html>

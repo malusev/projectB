@@ -377,33 +377,6 @@ module.exports = {
 /* 1 */
 /***/ (function(module, exports) {
 
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
@@ -483,7 +456,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -711,7 +684,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -817,6 +790,33 @@ module.exports = function normalizeComponent (
     options: options
   }
 }
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
 
 
 /***/ }),
@@ -3502,7 +3502,7 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(4)))
 
 /***/ }),
 /* 7 */
@@ -14338,7 +14338,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(15);
-module.exports = __webpack_require__(69);
+module.exports = __webpack_require__(74);
 
 
 /***/ }),
@@ -14369,7 +14369,7 @@ Vue.component('home-component', __webpack_require__(48));
 Vue.component('banner-component', __webpack_require__(53));
 Vue.component('about-component', __webpack_require__(59));
 Vue.component('beers-component', __webpack_require__(64));
-Vue.component('contact-component', __webpack_require__(73));
+Vue.component('contact-component', __webpack_require__(69));
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
 
@@ -31557,7 +31557,7 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(18)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(18)(module)))
 
 /***/ }),
 /* 18 */
@@ -47520,7 +47520,7 @@ Vue.compile = compileToFunctions;
 
 module.exports = Vue;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(40).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(40).setImmediate))
 
 /***/ }),
 /* 40 */
@@ -47590,7 +47590,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
 /* 41 */
@@ -47783,7 +47783,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(9)))
 
 /***/ }),
 /* 42 */
@@ -47794,7 +47794,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(43)
 }
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(3)
 /* script */
 var __vue_script__ = __webpack_require__(46)
 /* template */
@@ -47847,7 +47847,7 @@ var content = __webpack_require__(44);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("9659c622", content, false, {});
+var update = __webpack_require__(2)("9659c622", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -47866,12 +47866,12 @@ if(false) {
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\nbody[data-v-1f42fb90] {\n  margin: 0 !important;\n}\n.container[data-v-1f42fb90] {\n  width: 1200px !important;\n  margin: 0 auto !important;\n  scroll-behavior: smooth !important;\n}\n.navbar-laravel[data-v-1f42fb90] {\n  background-color: #fff;\n  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n}\n.navbar[data-v-1f42fb90] {\n  width: 100%;\n  height: 80px;\n  position: fixed;\n  top: 0;\n  margin: 0;\n  color: white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n.navbar ul[data-v-1f42fb90] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    list-style: none;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding: 0;\n    margin-right: 80px;\n}\n.navbar ul a[data-v-1f42fb90] {\n      margin: 12px;\n      padding: 14px 10px;\n      color: white;\n      text-decoration: none;\n      text-transform: uppercase;\n      position: relative;\n}\n.navbar ul a[data-v-1f42fb90]:before {\n        content: \" \";\n        position: absolute;\n        left: 0%;\n        bottom: 10px;\n        height: 1px;\n        width: 0%;\n        background-color: #868F3F;\n        -webkit-transition: width 0.5s ease-in-out;\n        transition: width 0.5s ease-in-out;\n}\n.navbar ul a[data-v-1f42fb90]:after {\n        content: \" \";\n        position: absolute;\n        right: 0%;\n        bottom: 10px;\n        height: 1px;\n        width: 0%;\n        background-color: #868F3F;\n        -webkit-transition: width 0.5s ease-in-out;\n        transition: width 0.5s ease-in-out;\n}\n.navbar ul a[data-v-1f42fb90]:hover:before, .navbar ul a[data-v-1f42fb90]:focus:before {\n        width: 50%;\n}\n.navbar ul a[data-v-1f42fb90]:hover:after, .navbar ul a[data-v-1f42fb90]:focus:after {\n        width: 50%;\n}\n.navbar.scrolled[data-v-1f42fb90] {\n  background-color: #000 !important;\n  -webkit-transition: background-color 100ms linear;\n  transition: background-color 100ms linear;\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-1f42fb90] {\n  margin: 0 !important;\n}\n.container[data-v-1f42fb90] {\n  width: 1200px !important;\n  margin: 0 auto !important;\n  scroll-behavior: smooth !important;\n}\n.navbar-laravel[data-v-1f42fb90] {\n  background-color: #fff;\n  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n}\n.navbar[data-v-1f42fb90] {\n  width: 100%;\n  height: 80px;\n  position: fixed;\n  top: 0;\n  margin: 0;\n  color: white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  z-index: 9999;\n}\n.navbar ul[data-v-1f42fb90] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    list-style: none;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding: 0;\n    margin-right: 80px;\n}\n.navbar ul a[data-v-1f42fb90] {\n      margin: 12px;\n      padding: 14px 10px;\n      color: white;\n      text-decoration: none;\n      text-transform: uppercase;\n      position: relative;\n}\n.navbar ul a[data-v-1f42fb90]:before {\n        content: \" \";\n        position: absolute;\n        left: 0%;\n        bottom: 10px;\n        height: 1px;\n        width: 0%;\n        background-color: #868F3F;\n        -webkit-transition: width 0.5s ease-in-out;\n        transition: width 0.5s ease-in-out;\n}\n.navbar ul a[data-v-1f42fb90]:after {\n        content: \" \";\n        position: absolute;\n        right: 0%;\n        bottom: 10px;\n        height: 1px;\n        width: 0%;\n        background-color: #868F3F;\n        -webkit-transition: width 0.5s ease-in-out;\n        transition: width 0.5s ease-in-out;\n}\n.navbar ul a[data-v-1f42fb90]:hover:before, .navbar ul a[data-v-1f42fb90]:focus:before {\n        width: 50%;\n}\n.navbar ul a[data-v-1f42fb90]:hover:after, .navbar ul a[data-v-1f42fb90]:focus:after {\n        width: 50%;\n}\n.navbar.scrolled[data-v-1f42fb90] {\n  background-color: #000 !important;\n  -webkit-transition: background-color 100ms linear;\n  transition: background-color 100ms linear;\n}\n", ""]);
 
 // exports
 
@@ -47952,7 +47952,9 @@ var staticRenderFns = [
       _c("div", { staticClass: "navbar-menu" }, [
         _c("ul", [
           _c("li", [
-            _c("a", { attrs: { href: "#about" } }, [_vm._v("o nama")])
+            _c("a", { attrs: { href: "#about", id: "onama" } }, [
+              _vm._v("o nama")
+            ])
           ]),
           _vm._v(" "),
           _c("li", [
@@ -47987,7 +47989,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(49)
 }
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(3)
 /* script */
 var __vue_script__ = __webpack_require__(51)
 /* template */
@@ -48040,7 +48042,7 @@ var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("094e2e44", content, false, {});
+var update = __webpack_require__(2)("094e2e44", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -48059,7 +48061,7 @@ if(false) {
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
@@ -48237,7 +48239,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(54)
 }
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(3)
 /* script */
 var __vue_script__ = __webpack_require__(56)
 /* template */
@@ -48290,7 +48292,7 @@ var content = __webpack_require__(55);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("01c30e8c", content, false, {});
+var update = __webpack_require__(2)("01c30e8c", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -48309,12 +48311,12 @@ if(false) {
 /* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\nbody[data-v-3d01b757] {\n  margin: 0 !important;\n}\n.container[data-v-3d01b757] {\n  width: 1200px !important;\n  margin: 0 auto !important;\n  scroll-behavior: smooth !important;\n}\n.navbar-laravel[data-v-3d01b757] {\n  background-color: #fff;\n  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n}\n.parallax-window[data-v-3d01b757] {\n  height: 100vh;\n  background: transparent;\n}\n.banner-wrapper[data-v-3d01b757] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n.banner-wrapper .banner__logo[data-v-3d01b757] {\n    width: 50%;\n    height: 100%;\n    background-color: black;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.banner-wrapper .banner__logo img[data-v-3d01b757] {\n      width: 100%;\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-3d01b757] {\n  margin: 0 !important;\n}\n.container[data-v-3d01b757] {\n  width: 1200px !important;\n  margin: 0 auto !important;\n  scroll-behavior: smooth !important;\n}\n.navbar-laravel[data-v-3d01b757] {\n  background-color: #fff;\n  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n}\n.parallax-window[data-v-3d01b757] {\n  height: 100vh;\n  background: transparent;\n}\n.banner-wrapper[data-v-3d01b757] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n}\n.banner-wrapper .banner__logo[data-v-3d01b757] {\n    position: absolute;\n    width: 50%;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    top: 0;\n    right: 0;\n    -webkit-transform: scaleY(0);\n            transform: scaleY(0);\n    -webkit-transform-origin: top;\n            transform-origin: top;\n    background-color: black;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.banner-wrapper .banner__logo img[data-v-3d01b757] {\n      width: 100%;\n      opacity: 0;\n      -webkit-transform: translateY(-500px);\n              transform: translateY(-500px);\n}\n", ""]);
 
 // exports
 
@@ -48336,87 +48338,86 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 //
 //
 //
-//
 
 
 !function (t, i, e, s) {
-  function o(i, e) {
-    var h = this;"object" == (typeof e === "undefined" ? "undefined" : _typeof(e)) && (delete e.refresh, delete e.render, t.extend(this, e)), this.$element = t(i), !this.imageSrc && this.$element.is("img") && (this.imageSrc = this.$element.attr("src"));var r = (this.position + "").toLowerCase().match(/\S+/g) || [];if (r.length < 1 && r.push("center"), 1 == r.length && r.push(r[0]), "top" != r[0] && "bottom" != r[0] && "left" != r[1] && "right" != r[1] || (r = [r[1], r[0]]), this.positionX !== s && (r[0] = this.positionX.toLowerCase()), this.positionY !== s && (r[1] = this.positionY.toLowerCase()), h.positionX = r[0], h.positionY = r[1], "left" != this.positionX && "right" != this.positionX && (isNaN(parseInt(this.positionX)) ? this.positionX = "center" : this.positionX = parseInt(this.positionX)), "top" != this.positionY && "bottom" != this.positionY && (isNaN(parseInt(this.positionY)) ? this.positionY = "center" : this.positionY = parseInt(this.positionY)), this.position = this.positionX + (isNaN(this.positionX) ? "" : "px") + " " + this.positionY + (isNaN(this.positionY) ? "" : "px"), navigator.userAgent.match(/(iPod|iPhone|iPad)/)) return this.imageSrc && this.iosFix && !this.$element.is("img") && this.$element.css({ backgroundImage: "url(" + this.imageSrc + ")", backgroundSize: "cover", backgroundPosition: this.position }), this;if (navigator.userAgent.match(/(Android)/)) return this.imageSrc && this.androidFix && !this.$element.is("img") && this.$element.css({ backgroundImage: "url(" + this.imageSrc + ")", backgroundSize: "cover", backgroundPosition: this.position }), this;this.$mirror = t("<div />").prependTo(this.mirrorContainer);var a = this.$element.find(">.parallax-slider"),
-        n = !1;0 == a.length ? this.$slider = t("<img />").prependTo(this.$mirror) : (this.$slider = a.prependTo(this.$mirror), n = !0), this.$mirror.addClass("parallax-mirror").css({ visibility: "hidden", zIndex: this.zIndex, position: "fixed", top: 0, left: 0, overflow: "hidden" }), this.$slider.addClass("parallax-slider").one("load", function () {
-      h.naturalHeight && h.naturalWidth || (h.naturalHeight = this.naturalHeight || this.height || 1, h.naturalWidth = this.naturalWidth || this.width || 1), h.aspectRatio = h.naturalWidth / h.naturalHeight, o.isSetup || o.setup(), o.sliders.push(h), o.isFresh = !1, o.requestRender();
-    }), n || (this.$slider[0].src = this.imageSrc), (this.naturalHeight && this.naturalWidth || this.$slider[0].complete || a.length > 0) && this.$slider.trigger("load");
-  }!function () {
-    for (var t = 0, e = ["ms", "moz", "webkit", "o"], s = 0; s < e.length && !i.requestAnimationFrame; ++s) {
-      i.requestAnimationFrame = i[e[s] + "RequestAnimationFrame"], i.cancelAnimationFrame = i[e[s] + "CancelAnimationFrame"] || i[e[s] + "CancelRequestAnimationFrame"];
-    }i.requestAnimationFrame || (i.requestAnimationFrame = function (e) {
-      var s = new Date().getTime(),
-          o = Math.max(0, 16 - (s - t)),
-          h = i.setTimeout(function () {
-        e(s + o);
-      }, o);return t = s + o, h;
-    }), i.cancelAnimationFrame || (i.cancelAnimationFrame = function (t) {
-      clearTimeout(t);
+    function o(i, e) {
+        var h = this;"object" == (typeof e === "undefined" ? "undefined" : _typeof(e)) && (delete e.refresh, delete e.render, t.extend(this, e)), this.$element = t(i), !this.imageSrc && this.$element.is("img") && (this.imageSrc = this.$element.attr("src"));var r = (this.position + "").toLowerCase().match(/\S+/g) || [];if (r.length < 1 && r.push("center"), 1 == r.length && r.push(r[0]), "top" != r[0] && "bottom" != r[0] && "left" != r[1] && "right" != r[1] || (r = [r[1], r[0]]), this.positionX !== s && (r[0] = this.positionX.toLowerCase()), this.positionY !== s && (r[1] = this.positionY.toLowerCase()), h.positionX = r[0], h.positionY = r[1], "left" != this.positionX && "right" != this.positionX && (isNaN(parseInt(this.positionX)) ? this.positionX = "center" : this.positionX = parseInt(this.positionX)), "top" != this.positionY && "bottom" != this.positionY && (isNaN(parseInt(this.positionY)) ? this.positionY = "center" : this.positionY = parseInt(this.positionY)), this.position = this.positionX + (isNaN(this.positionX) ? "" : "px") + " " + this.positionY + (isNaN(this.positionY) ? "" : "px"), navigator.userAgent.match(/(iPod|iPhone|iPad)/)) return this.imageSrc && this.iosFix && !this.$element.is("img") && this.$element.css({ backgroundImage: "url(" + this.imageSrc + ")", backgroundSize: "cover", backgroundPosition: this.position }), this;if (navigator.userAgent.match(/(Android)/)) return this.imageSrc && this.androidFix && !this.$element.is("img") && this.$element.css({ backgroundImage: "url(" + this.imageSrc + ")", backgroundSize: "cover", backgroundPosition: this.position }), this;this.$mirror = t("<div />").prependTo(this.mirrorContainer);var a = this.$element.find(">.parallax-slider"),
+            n = !1;0 == a.length ? this.$slider = t("<img />").prependTo(this.$mirror) : (this.$slider = a.prependTo(this.$mirror), n = !0), this.$mirror.addClass("parallax-mirror").css({ visibility: "hidden", zIndex: this.zIndex, position: "fixed", top: 0, left: 0, overflow: "hidden" }), this.$slider.addClass("parallax-slider").one("load", function () {
+            h.naturalHeight && h.naturalWidth || (h.naturalHeight = this.naturalHeight || this.height || 1, h.naturalWidth = this.naturalWidth || this.width || 1), h.aspectRatio = h.naturalWidth / h.naturalHeight, o.isSetup || o.setup(), o.sliders.push(h), o.isFresh = !1, o.requestRender();
+        }), n || (this.$slider[0].src = this.imageSrc), (this.naturalHeight && this.naturalWidth || this.$slider[0].complete || a.length > 0) && this.$slider.trigger("load");
+    }!function () {
+        for (var t = 0, e = ["ms", "moz", "webkit", "o"], s = 0; s < e.length && !i.requestAnimationFrame; ++s) {
+            i.requestAnimationFrame = i[e[s] + "RequestAnimationFrame"], i.cancelAnimationFrame = i[e[s] + "CancelAnimationFrame"] || i[e[s] + "CancelRequestAnimationFrame"];
+        }i.requestAnimationFrame || (i.requestAnimationFrame = function (e) {
+            var s = new Date().getTime(),
+                o = Math.max(0, 16 - (s - t)),
+                h = i.setTimeout(function () {
+                e(s + o);
+            }, o);return t = s + o, h;
+        }), i.cancelAnimationFrame || (i.cancelAnimationFrame = function (t) {
+            clearTimeout(t);
+        });
+    }(), t.extend(o.prototype, { speed: .2, bleed: 0, zIndex: -100, iosFix: !0, androidFix: !0, position: "center", overScrollFix: !1, mirrorContainer: "body", refresh: function refresh() {
+            this.boxWidth = this.$element.outerWidth(), this.boxHeight = this.$element.outerHeight() + 2 * this.bleed, this.boxOffsetTop = this.$element.offset().top - this.bleed, this.boxOffsetLeft = this.$element.offset().left, this.boxOffsetBottom = this.boxOffsetTop + this.boxHeight;var t,
+                i = o.winHeight,
+                e = o.docHeight,
+                s = Math.min(this.boxOffsetTop, e - i),
+                h = Math.max(this.boxOffsetTop + this.boxHeight - i, 0),
+                r = this.boxHeight + (s - h) * (1 - this.speed) | 0,
+                a = (this.boxOffsetTop - s) * (1 - this.speed) | 0;r * this.aspectRatio >= this.boxWidth ? (this.imageWidth = r * this.aspectRatio | 0, this.imageHeight = r, this.offsetBaseTop = a, t = this.imageWidth - this.boxWidth, "left" == this.positionX ? this.offsetLeft = 0 : "right" == this.positionX ? this.offsetLeft = -t : isNaN(this.positionX) ? this.offsetLeft = -t / 2 | 0 : this.offsetLeft = Math.max(this.positionX, -t)) : (this.imageWidth = this.boxWidth, this.imageHeight = this.boxWidth / this.aspectRatio | 0, this.offsetLeft = 0, t = this.imageHeight - r, "top" == this.positionY ? this.offsetBaseTop = a : "bottom" == this.positionY ? this.offsetBaseTop = a - t : isNaN(this.positionY) ? this.offsetBaseTop = a - t / 2 | 0 : this.offsetBaseTop = a + Math.max(this.positionY, -t));
+        }, render: function render() {
+            var t = o.scrollTop,
+                i = o.scrollLeft,
+                e = this.overScrollFix ? o.overScroll : 0,
+                s = t + o.winHeight;this.boxOffsetBottom > t && this.boxOffsetTop <= s ? (this.visibility = "visible", this.mirrorTop = this.boxOffsetTop - t, this.mirrorLeft = this.boxOffsetLeft - i, this.offsetTop = this.offsetBaseTop - this.mirrorTop * (1 - this.speed)) : this.visibility = "hidden", this.$mirror.css({ transform: "translate3d(" + this.mirrorLeft + "px, " + (this.mirrorTop - e) + "px, 0px)", visibility: this.visibility, height: this.boxHeight, width: this.boxWidth }), this.$slider.css({ transform: "translate3d(" + this.offsetLeft + "px, " + this.offsetTop + "px, 0px)", position: "absolute", height: this.imageHeight, width: this.imageWidth, maxWidth: "none" });
+        } }), t.extend(o, { scrollTop: 0, scrollLeft: 0, winHeight: 0, winWidth: 0, docHeight: 1 << 30, docWidth: 1 << 30, sliders: [], isReady: !1, isFresh: !1, isBusy: !1, setup: function setup() {
+            function s() {
+                if (p == i.pageYOffset) return i.requestAnimationFrame(s), !1;p = i.pageYOffset, h.render(), i.requestAnimationFrame(s);
+            }if (!this.isReady) {
+                var h = this,
+                    r = t(e),
+                    a = t(i),
+                    n = function n() {
+                    o.winHeight = a.height(), o.winWidth = a.width(), o.docHeight = r.height(), o.docWidth = r.width();
+                },
+                    l = function l() {
+                    var t = a.scrollTop(),
+                        i = o.docHeight - o.winHeight,
+                        e = o.docWidth - o.winWidth;o.scrollTop = Math.max(0, Math.min(i, t)), o.scrollLeft = Math.max(0, Math.min(e, a.scrollLeft())), o.overScroll = Math.max(t - i, Math.min(t, 0));
+                };a.on("resize.px.parallax load.px.parallax", function () {
+                    n(), h.refresh(), o.isFresh = !1, o.requestRender();
+                }).on("scroll.px.parallax load.px.parallax", function () {
+                    l(), o.requestRender();
+                }), n(), l(), this.isReady = !0;var p = -1;s();
+            }
+        }, configure: function configure(i) {
+            "object" == (typeof i === "undefined" ? "undefined" : _typeof(i)) && (delete i.refresh, delete i.render, t.extend(this.prototype, i));
+        }, refresh: function refresh() {
+            t.each(this.sliders, function () {
+                this.refresh();
+            }), this.isFresh = !0;
+        }, render: function render() {
+            this.isFresh || this.refresh(), t.each(this.sliders, function () {
+                this.render();
+            });
+        }, requestRender: function requestRender() {
+            var t = this;t.render(), t.isBusy = !1;
+        }, destroy: function destroy(e) {
+            var s,
+                h = t(e).data("px.parallax");for (h.$mirror.remove(), s = 0; s < this.sliders.length; s += 1) {
+                this.sliders[s] == h && this.sliders.splice(s, 1);
+            }t(e).data("px.parallax", !1), 0 === this.sliders.length && (t(i).off("scroll.px.parallax resize.px.parallax load.px.parallax"), this.isReady = !1, o.isSetup = !1);
+        } });var h = t.fn.parallax;t.fn.parallax = function (s) {
+        return this.each(function () {
+            var h = t(this),
+                r = "object" == (typeof s === "undefined" ? "undefined" : _typeof(s)) && s;this == i || this == e || h.is("body") ? o.configure(r) : h.data("px.parallax") ? "object" == (typeof s === "undefined" ? "undefined" : _typeof(s)) && t.extend(h.data("px.parallax"), r) : (r = t.extend({}, h.data(), r), h.data("px.parallax", new o(this, r))), "string" == typeof s && ("destroy" == s ? o.destroy(this) : o[s]());
+        });
+    }, t.fn.parallax.Constructor = o, t.fn.parallax.noConflict = function () {
+        return t.fn.parallax = h, this;
+    }, t(function () {
+        t('[data-parallax="scroll"]').parallax();
     });
-  }(), t.extend(o.prototype, { speed: .2, bleed: 0, zIndex: -100, iosFix: !0, androidFix: !0, position: "center", overScrollFix: !1, mirrorContainer: "body", refresh: function refresh() {
-      this.boxWidth = this.$element.outerWidth(), this.boxHeight = this.$element.outerHeight() + 2 * this.bleed, this.boxOffsetTop = this.$element.offset().top - this.bleed, this.boxOffsetLeft = this.$element.offset().left, this.boxOffsetBottom = this.boxOffsetTop + this.boxHeight;var t,
-          i = o.winHeight,
-          e = o.docHeight,
-          s = Math.min(this.boxOffsetTop, e - i),
-          h = Math.max(this.boxOffsetTop + this.boxHeight - i, 0),
-          r = this.boxHeight + (s - h) * (1 - this.speed) | 0,
-          a = (this.boxOffsetTop - s) * (1 - this.speed) | 0;r * this.aspectRatio >= this.boxWidth ? (this.imageWidth = r * this.aspectRatio | 0, this.imageHeight = r, this.offsetBaseTop = a, t = this.imageWidth - this.boxWidth, "left" == this.positionX ? this.offsetLeft = 0 : "right" == this.positionX ? this.offsetLeft = -t : isNaN(this.positionX) ? this.offsetLeft = -t / 2 | 0 : this.offsetLeft = Math.max(this.positionX, -t)) : (this.imageWidth = this.boxWidth, this.imageHeight = this.boxWidth / this.aspectRatio | 0, this.offsetLeft = 0, t = this.imageHeight - r, "top" == this.positionY ? this.offsetBaseTop = a : "bottom" == this.positionY ? this.offsetBaseTop = a - t : isNaN(this.positionY) ? this.offsetBaseTop = a - t / 2 | 0 : this.offsetBaseTop = a + Math.max(this.positionY, -t));
-    }, render: function render() {
-      var t = o.scrollTop,
-          i = o.scrollLeft,
-          e = this.overScrollFix ? o.overScroll : 0,
-          s = t + o.winHeight;this.boxOffsetBottom > t && this.boxOffsetTop <= s ? (this.visibility = "visible", this.mirrorTop = this.boxOffsetTop - t, this.mirrorLeft = this.boxOffsetLeft - i, this.offsetTop = this.offsetBaseTop - this.mirrorTop * (1 - this.speed)) : this.visibility = "hidden", this.$mirror.css({ transform: "translate3d(" + this.mirrorLeft + "px, " + (this.mirrorTop - e) + "px, 0px)", visibility: this.visibility, height: this.boxHeight, width: this.boxWidth }), this.$slider.css({ transform: "translate3d(" + this.offsetLeft + "px, " + this.offsetTop + "px, 0px)", position: "absolute", height: this.imageHeight, width: this.imageWidth, maxWidth: "none" });
-    } }), t.extend(o, { scrollTop: 0, scrollLeft: 0, winHeight: 0, winWidth: 0, docHeight: 1 << 30, docWidth: 1 << 30, sliders: [], isReady: !1, isFresh: !1, isBusy: !1, setup: function setup() {
-      function s() {
-        if (p == i.pageYOffset) return i.requestAnimationFrame(s), !1;p = i.pageYOffset, h.render(), i.requestAnimationFrame(s);
-      }if (!this.isReady) {
-        var h = this,
-            r = t(e),
-            a = t(i),
-            n = function n() {
-          o.winHeight = a.height(), o.winWidth = a.width(), o.docHeight = r.height(), o.docWidth = r.width();
-        },
-            l = function l() {
-          var t = a.scrollTop(),
-              i = o.docHeight - o.winHeight,
-              e = o.docWidth - o.winWidth;o.scrollTop = Math.max(0, Math.min(i, t)), o.scrollLeft = Math.max(0, Math.min(e, a.scrollLeft())), o.overScroll = Math.max(t - i, Math.min(t, 0));
-        };a.on("resize.px.parallax load.px.parallax", function () {
-          n(), h.refresh(), o.isFresh = !1, o.requestRender();
-        }).on("scroll.px.parallax load.px.parallax", function () {
-          l(), o.requestRender();
-        }), n(), l(), this.isReady = !0;var p = -1;s();
-      }
-    }, configure: function configure(i) {
-      "object" == (typeof i === "undefined" ? "undefined" : _typeof(i)) && (delete i.refresh, delete i.render, t.extend(this.prototype, i));
-    }, refresh: function refresh() {
-      t.each(this.sliders, function () {
-        this.refresh();
-      }), this.isFresh = !0;
-    }, render: function render() {
-      this.isFresh || this.refresh(), t.each(this.sliders, function () {
-        this.render();
-      });
-    }, requestRender: function requestRender() {
-      var t = this;t.render(), t.isBusy = !1;
-    }, destroy: function destroy(e) {
-      var s,
-          h = t(e).data("px.parallax");for (h.$mirror.remove(), s = 0; s < this.sliders.length; s += 1) {
-        this.sliders[s] == h && this.sliders.splice(s, 1);
-      }t(e).data("px.parallax", !1), 0 === this.sliders.length && (t(i).off("scroll.px.parallax resize.px.parallax load.px.parallax"), this.isReady = !1, o.isSetup = !1);
-    } });var h = t.fn.parallax;t.fn.parallax = function (s) {
-    return this.each(function () {
-      var h = t(this),
-          r = "object" == (typeof s === "undefined" ? "undefined" : _typeof(s)) && s;this == i || this == e || h.is("body") ? o.configure(r) : h.data("px.parallax") ? "object" == (typeof s === "undefined" ? "undefined" : _typeof(s)) && t.extend(h.data("px.parallax"), r) : (r = t.extend({}, h.data(), r), h.data("px.parallax", new o(this, r))), "string" == typeof s && ("destroy" == s ? o.destroy(this) : o[s]());
-    });
-  }, t.fn.parallax.Constructor = o, t.fn.parallax.noConflict = function () {
-    return t.fn.parallax = h, this;
-  }, t(function () {
-    t('[data-parallax="scroll"]').parallax();
-  });
 }(jQuery, window, document);
 
 /***/ }),
@@ -48447,7 +48448,10 @@ var staticRenderFns = [
         },
         [
           _c("div", { staticClass: "banner__logo" }, [
-            _c("img", { attrs: { src: __webpack_require__(58) } })
+            _c("img", {
+              staticClass: "kvadrat",
+              attrs: { src: __webpack_require__(58) }
+            })
           ])
         ]
       )
@@ -48478,7 +48482,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(60)
 }
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(3)
 /* script */
 var __vue_script__ = __webpack_require__(62)
 /* template */
@@ -48531,7 +48535,7 @@ var content = __webpack_require__(61);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("e477d12a", content, false, {});
+var update = __webpack_require__(2)("e477d12a", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -48550,12 +48554,12 @@ if(false) {
 /* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\nbody[data-v-19b32af0] {\n  margin: 0 !important;\n}\n.container[data-v-19b32af0] {\n  width: 1200px !important;\n  margin: 0 auto !important;\n  scroll-behavior: smooth !important;\n}\n.navbar-laravel[data-v-19b32af0] {\n  background-color: #fff;\n  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n}\n.parallax-window[data-v-19b32af0] {\n  height: 100vh;\n  background: transparent;\n}\n.about-wrapper[data-v-19b32af0] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.about-wrapper .uskoro[data-v-19b32af0] {\n    width: 1200px;\n    height: 200px;\n    background-color: black;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.about-wrapper .uskoro h1[data-v-19b32af0] {\n      color: white;\n      font-size: 60px;\n      margin: 0;\n      padding: 0 150px;\n      font-weight: lighter;\n      border-top: 4px solid #868F3F;\n      border-bottom: 4px solid #868F3F;\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-19b32af0] {\n  margin: 0 !important;\n}\n.container[data-v-19b32af0] {\n  width: 1200px !important;\n  margin: 0 auto !important;\n  scroll-behavior: smooth !important;\n}\n.navbar-laravel[data-v-19b32af0] {\n  background-color: #fff;\n  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);\n}\n.about-wrapper[data-v-19b32af0] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  position: relative;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  height: 100vh;\n}\n.about-wrapper #uskoro[data-v-19b32af0] {\n    width: 1200px;\n    height: 200px;\n    background-color: black;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    opacity: 0;\n    -webkit-transform: translateY(-200px);\n            transform: translateY(-200px);\n    z-index: 999;\n    -webkit-transform-origin: top;\n            transform-origin: top;\n}\n.about-wrapper #uskoro h1[data-v-19b32af0] {\n      color: white;\n      font-size: 60px;\n      margin: 0;\n      padding: 0 150px;\n      font-weight: lighter;\n      border-top: 4px solid #868F3F;\n      border-bottom: 4px solid #868F3F;\n}\n.about-wrapper #uskoro2[data-v-19b32af0] {\n    width: 1200px;\n    height: 200px;\n    background-color: black;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    opacity: 0;\n    -webkit-transform: translateY(-200px);\n            transform: translateY(-200px);\n    z-index: 999;\n    -webkit-transform-origin: top;\n            transform-origin: top;\n}\n.about-wrapper #uskoro2 h1[data-v-19b32af0] {\n      color: white;\n      font-size: 60px;\n      margin: 0;\n      padding: 0 150px;\n      font-weight: lighter;\n      border-top: 4px solid #868F3F;\n      border-bottom: 4px solid #868F3F;\n}\n.about-wrapper #uskoro3[data-v-19b32af0] {\n    width: 1200px;\n    height: 200px;\n    background-color: black;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    opacity: 0;\n    -webkit-transform: translateY(-200px);\n            transform: translateY(-200px);\n    z-index: 999;\n    -webkit-transform-origin: top;\n            transform-origin: top;\n}\n.about-wrapper #uskoro3 h1[data-v-19b32af0] {\n      color: white;\n      font-size: 60px;\n      margin: 0;\n      padding: 0 150px;\n      font-weight: lighter;\n      border-top: 4px solid #868F3F;\n      border-bottom: 4px solid #868F3F;\n}\n.video-foreground[data-v-19b32af0] {\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  background: black;\n}\n.video-foreground iframe[data-v-19b32af0], .video-foreground img[data-v-19b32af0] {\n    width: 100%;\n    height: 100%;\n}\n", ""]);
 
 // exports
 
@@ -48566,6 +48570,18 @@ exports.push([module.i, "\nbody[data-v-19b32af0] {\n  margin: 0 !important;\n}\n
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -48676,18 +48692,32 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "page-about", attrs: { id: "about" } }, [
-      _c(
-        "div",
-        {
-          staticClass: "parallax-window about-wrapper",
-          attrs: {
-            "data-parallax": "scroll",
-            "data-image-src":
-              "https://i.pinimg.com/originals/53/7b/a4/537ba46b2cfff76bf0b5afa23b6a3514.jpg"
-          }
-        },
-        [_c("div", { staticClass: "uskoro" }, [_c("h1", [_vm._v("USKORO")])])]
-      )
+      _c("div", { staticClass: "about-wrapper" }, [
+        _c("div", { staticClass: "video-foreground" }, [
+          _c("img", { attrs: { src: __webpack_require__(78) } }),
+          _vm._v(" "),
+          _c("iframe", {
+            attrs: {
+              src:
+                "https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ",
+              frameborder: "0",
+              allowfullscreen: ""
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "kvadrat2", attrs: { id: "uskoro" } }, [
+          _c("h1", [_vm._v("USKORO")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "kvadrat2", attrs: { id: "uskoro2" } }, [
+          _c("h1", [_vm._v("USKORO")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "kvadrat2", attrs: { id: "uskoro3" } }, [
+          _c("h1", [_vm._v("USKORO")])
+        ])
+      ])
     ])
   }
 ]
@@ -48709,7 +48739,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(65)
 }
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(3)
 /* script */
 var __vue_script__ = __webpack_require__(67)
 /* template */
@@ -48762,7 +48792,7 @@ var content = __webpack_require__(66);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("43753098", content, false, {});
+var update = __webpack_require__(2)("43753098", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -48781,7 +48811,7 @@ if(false) {
 /* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
@@ -48933,27 +48963,18 @@ if (false) {
 
 /***/ }),
 /* 69 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(74)
+  __webpack_require__(70)
 }
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(76)
+var __vue_script__ = __webpack_require__(72)
 /* template */
-var __vue_template__ = __webpack_require__(77)
+var __vue_template__ = __webpack_require__(73)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -48992,17 +49013,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 74 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(75);
+var content = __webpack_require__(71);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("d26263ee", content, false, {});
+var update = __webpack_require__(2)("d26263ee", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -49018,10 +49039,10 @@ if(false) {
 }
 
 /***/ }),
-/* 75 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
@@ -49032,7 +49053,7 @@ exports.push([module.i, "\nbody[data-v-4c2584f6] {\n  margin: 0 !important;\n}\n
 
 
 /***/ }),
-/* 76 */
+/* 72 */
 /***/ (function(module, exports) {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -49132,7 +49153,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 }(jQuery, window, document);
 
 /***/ }),
-/* 77 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -49174,6 +49195,21 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-4c2584f6", module.exports)
   }
 }
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/zolja.gif?d1c7b6e35cfddd25d6baae5a359334a7";
 
 /***/ })
 /******/ ]);
