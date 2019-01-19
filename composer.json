@@ -24,6 +24,8 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
+        "disable-tls": true,
+        "secure-http": false,
         "sort-packages": true
     },
     "extra": {
